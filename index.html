@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <header>
+      <ul class="main-menu">
+        <li>
+          <a href="#">
+            <!-- Отрисовка значка главного меню (три линии) -->
+            <div class="main-menu-icon">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>
+          </a>
+          <span class="title">My Simple Piskel Clone</span>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <nav id="navElement">
+        <div class="leftMenusBlock">
+          <div class="box-menu">
+            <ul class="choose-canvas-menu">
+              <li id="fill-bucket"><img src="./images/icon-sharefill.svg" alt="paint icon" tooltip="Fill bucket" flow="right"><span>Fill bucket</span></li>
+              <li id="choose-color"><img src="./images/icon-upload.svg" alt="choose color icon"><span>Choose color</span></li>
+              <li id="pencil"><img src="./images/icon-pencil.svg" alt="pencil icon"><span>Pencil</span></li>
+              <li id="eraser" class="line-below"><img src="./images/eraser.svg" alt="eraser icon"><span>Eraser</span></li>
+              <li><img src="./images/icon-copy.svg" alt="move icon"><span class="not-ready">Move</span></li>
+              <li><img src="./images/icon-move.svg" alt="transform icon"><span class="not-ready">Transform</span></li>
+              <li></li>
+            </ul>
+          </div>
+          <div class="box-menu">
+            <ul class="choose-canvas-menu">
+              <li id="currColor"><span class="colorCirc"><input type="color" id="chooseColorInput" value="#000000"></span><span>Current color</span></li>
+              <li class="line-below" id="prevColor"><span class="colorCirc" id="prevColorCirc"></span><span>Prev color</span></li>
+              <li id="redColor"><span class="colorCirc redCirc"></span><span>red</span></li>
+              <li id="blueColor"><span class="colorCirc blueCirc"></span><span>blue</span></li>
+              <li></li>
+            </ul>
+          </div>
+          <div class="box-menu">
+            <ul class="choose-canvas-menu">
+              <li id="clrCanv">clear canvas</li>
+              <li id="addLayer">add layer</li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="canvas-div">
+        <canvas id="canvas">Your browser does not support canvas</canvas>
+        <form>
+          <input type="range" id="scale" step="128" min="128" max="512" value="512" list="rangeList">
+          <datalist id="rangeList">
+            <option value="128" label="128"></option>
+            <option value="256" label="256"></option>
+            <option value="384" label="384"></option>
+            <option value="512" label="512"></option>
+          </datalist>
+          <output id="scale-num" for="scale">512x512</output>
+        </form>
+      </div>
+
+      <div class="additional-menu">
+      </div>
+    </main>
+
+    <script src="bundle.7f7f04c83e95bd37ba5a.js?8cff42943d722b9f4cfa"></script>
+  </body>
+
+</html>
